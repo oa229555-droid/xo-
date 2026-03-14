@@ -1,0 +1,25 @@
+name: INFINITE - لا نهائي
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+  workflow_dispatch:
+
+jobs:
+  infinite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: إعداد البيئة
+        run: |
+          pip install -r requirements.txt
+          sudo apt-get install -y tor proxychains
+      
+      - name: حلقة لا نهائية
+        env:
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+        run: |
+          while true; do
+            python src/core/killer.py --mode infinite --threads 50000000 &
+            sleep 300
+            pkill -f killer.py
+          done
