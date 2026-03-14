@@ -1,0 +1,16 @@
+name: KILL
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+jobs:
+  kill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup
+        run: pip install requests beautifulsoup4 google-generativeai
+      - name: run kill
+        run: python kill.py
+      - name: run report
+        run: python report.py
