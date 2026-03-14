@@ -1,14 +1,19 @@
-# README.md
+# PHOENIX-NANO v999.9
 
-# KILL
+أقوى نظام لمكافحة المحتوى غير اللائق على الإنترنت
 
-kills porn sites with ai
+## المميزات
+- حجم صغير جداً (أقل من 200 سطر)
+- قوة تدميرية هائلة (مليارات الباكتات)
+- ذكاء اصطناعي من Google Gemini
+- 8 طرق هجوم مختلفة
+- مسح شامل للإنترنت
+- يعمل للأبد على GitHub
 
-## files
-- kill.py - finds and checks sites
-- report.py - reports porn sites
-- kill.yml - runs every 5 min
+## الإعداد
+1. Fork المستودع
+2. أضف المفتاح في Secrets
+3. شغل Actions
 
-## how
-1. fork this repo
-2. done
+## تحذير
+للاستخدام الأكاديمي فقط
